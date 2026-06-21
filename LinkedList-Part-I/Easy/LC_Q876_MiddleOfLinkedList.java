@@ -1,3 +1,4 @@
+// Optimal
 class Solution {
     public ListNode middleNode(ListNode head) {
         ListNode slow = head;
@@ -9,3 +10,27 @@ class Solution {
         return slow;
     }
 }
+
+
+
+
+
+// Brute Force
+// class Solution {
+//     public ListNode middleNode(ListNode head) {
+//         int nodes = 0;
+//         ListNode temp = head;
+//         while(temp != null){
+//             nodes++;
+//             temp = temp.next;
+//         }
+
+//         int i = 0;
+//         temp = head;
+//         while(i < nodes / 2){
+//             temp = temp.next;
+//             i++;
+//         }
+//         return temp;
+//     }
+// }
