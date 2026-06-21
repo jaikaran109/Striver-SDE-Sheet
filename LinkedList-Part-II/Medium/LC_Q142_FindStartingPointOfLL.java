@@ -1,3 +1,5 @@
+// If you have any doubt about this logic the go and check Striver L17:Find the starting point of the loop
+
 public class Solution {
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head;
