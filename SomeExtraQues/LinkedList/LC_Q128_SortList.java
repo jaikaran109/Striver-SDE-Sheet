@@ -1,3 +1,6 @@
+// Optimal - Merge Sort, but I haven't learned recursion yet, so I'm not doing it right now.
+
+
 class Solution {
     public ListNode sortList(ListNode head) {
         ListNode dummy = new ListNode(-1);
