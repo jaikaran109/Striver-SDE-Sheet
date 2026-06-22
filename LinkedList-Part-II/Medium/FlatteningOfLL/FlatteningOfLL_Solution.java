@@ -55,3 +55,50 @@ class Solution {
 }
 
 // TC = O(mxn) *2 + xlogx
+
+
+
+
+
+// - Have a Look
+// class Solution {
+
+//     private ListNode merge(ListNode a, ListNode b){
+
+//         ListNode dummy = new ListNode(-1);
+//         ListNode temp = dummy;
+
+//         while(a != null && b != null){
+
+//             if(a.val <= b.val){
+//                 temp.child = a;
+//                 a = a.child;
+//             }else{
+//                 temp.child = b;
+//                 b = b.child;
+//             }
+
+//             temp = temp.child;
+//         }
+
+//         if(a != null) temp.child = a;
+//         else temp.child = b;
+
+//         return dummy.child;
+//     }
+
+//     public ListNode flattenLinkedList(ListNode head){
+
+//         if(head == null || head.next == null)
+//             return head;
+
+//         ListNode mergedHead = flattenLinkedList(head.next);
+
+//         return merge(head, mergedHead);
+//     }
+// }
+
+
+
+
+
