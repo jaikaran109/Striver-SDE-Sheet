@@ -47,9 +47,11 @@ class Solution {
 
         for(int x : list){
             temp.child = new ListNode(x);
-            temp = temp.child;
+            temp = temp.child;   // in vertical form 
         }
 
         return dummy.child;
     }
 }
+
+// TC = O(mxn) *2 + xlogx
