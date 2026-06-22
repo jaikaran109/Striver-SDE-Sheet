@@ -22,3 +22,8 @@ class Solution {
         return ans.next;
     }
 }
+
+
+
+// Brute Force
+// Add both linkedlists in Arraylist then sort it then make another LL
