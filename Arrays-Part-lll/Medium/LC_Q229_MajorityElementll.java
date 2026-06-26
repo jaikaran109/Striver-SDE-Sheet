@@ -1,4 +1,4 @@
-// Optimal
+// Optimal  -- Dry Run this for understanding
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
         int count1 = 0 , count2 = 0;
