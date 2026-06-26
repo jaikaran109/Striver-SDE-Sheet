@@ -1,4 +1,4 @@
-// Optimal Approach
+// Better Approach
 class Solution {
     public void setZeroes(int[][] matrix) {
         // if there is an 0 in any column or row then we can convert the whole row and col soo if you find a 0 then marks its row and column -- keep a tarck of row and col
