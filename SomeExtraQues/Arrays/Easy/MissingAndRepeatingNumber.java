@@ -26,3 +26,24 @@ class Solution {
         return ans;
     }
 }
+
+
+
+// Brute Force
+//  i = 0 --- n ;
+//  nested j = 0 --- n - 1;
+// if arr[j] == i ; count++;
+// if count == 2 ; repeat = i ; outside j loop
+// if count == 0 ; missing = i ; outside j loop
+
+//  O(n^2);
+
+
+
+// Better
+// i = 0 --- n;
+// create a hasharray of n + 1
+// count occurence of all ele in there  index
+// jiska 2 hoga vo repeating , 0 vo missing
+
+// o(n)  nd space O(n)
