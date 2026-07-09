@@ -81,40 +81,42 @@ class LFUCache {
 /*
 ## Explanation
 
-In this problem, we need to design an LFU Cache.
+Is problem me hume LFU Cache design karna hai.
 
-LFU means Least Frequently Used. So, when the cache becomes full, we need to remove the key which has been used the least number of times.
+LFU ka full form hai Least Frequently Used. Matlab jab cache full ho jaye, to hume us key ko remove karna hai jo sabse kam baar use hui hai.
 
-But there is one more condition. If two or more keys have the same frequency, then we remove the least recently used key among them.
+Agar multiple keys ki frequency same hai, then unme se least recently used key remove hogi.
 
-So basically, we have to manage two things:
+So is problem me hume two things maintain karni hoti hain:
 
-1. Frequency of every key
-2. Recent order of keys having the same frequency
+1. Har key ki frequency
+2. Same frequency wali keys ka recent order
 
-Whenever we call `get(key)`, if the key exists, its frequency increases by 1.
+Jab bhi `get(key)` call hota hai and key exist karti hai, us key ki frequency 1 se increase ho jaati hai.
 
-Whenever we call `put(key, value)`, if the key already exists, we update its value and increase its frequency by 1.
+Jab bhi `put(key, value)` call hota hai and key already exist karti hai, hum value update karte hain and frequency increase karte hain.
 
-If the key does not exist and the cache is full, then we remove the key with the minimum frequency. If multiple keys have the same minimum frequency, we remove the oldest key from that frequency group.
+Agar new key insert karni hai and cache full hai, then hum minimum frequency wali key remove karte hain. Agar same minimum frequency me multiple keys hain, then jo key sabse purani hai, vo remove hoti hai.
 
 ## Approach
 
-To solve this efficiently, we use three maps.
+Efficient solution ke liye hum three maps use karte hain.
 
-`keyToValue` stores the value of each key.
+`keyToValue` key ki value store karta hai.
 
-`keyToFreq` stores the current frequency of each key.
+`keyToFreq` key ki current frequency store karta hai.
 
-`freqToKeys` stores all keys having the same frequency. For this, we use `LinkedHashSet` because it maintains insertion order. This helps us remove the least recently used key when multiple keys have the same frequency.
+`freqToKeys` same frequency wali keys ko store karta hai. Iske liye hum `LinkedHashSet` use karte hain because ye insertion order maintain karta hai. Isse same frequency ke andar least recently used key ko easily remove kar sakte hain.
 
-We also maintain a variable `minFreq`, which tells us the current minimum frequency present in the cache.
+Ek `minFreq` variable bhi maintain karte hain, jo current cache ki minimum frequency batata hai.
 
-When a key is accessed, we remove it from its old frequency group, increase its frequency, and add it to the new frequency group.
+Jab bhi koi key access hoti hai, hum usko old frequency group se remove karte hain, uski frequency increase karte hain, and new frequency group me add kar dete hain.
 
-If the old frequency group becomes empty and that frequency was equal to `minFreq`, then we increase `minFreq`.
+Agar old frequency group empty ho jata hai and old frequency `minFreq` ke equal thi, then hum `minFreq` ko increase kar dete hain.
 
-For inserting a new key, its frequency is always 1, so we set `minFreq = 1`.
+New key insert karte time uski frequency always 1 hoti hai, so `minFreq = 1` set kar dete hain.
 
-This allows both `get()` and `put()` operations to work in O(1) average time.
+Is approach se `get()` and `put()` dono operations O(1) average time me ho jaate hain.
+
 */
+
