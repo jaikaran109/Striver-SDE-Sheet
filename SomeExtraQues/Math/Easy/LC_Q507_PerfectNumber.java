@@ -8,8 +8,7 @@ class Solution {
         for(int i = 2 ; i <= Math.sqrt(num) ; i++){
             if(num % i == 0){
                 sum += i;
-                sum += original / i;
-                original = num;
+                sum += num / i;
             }
         }
         return sum == num ;
