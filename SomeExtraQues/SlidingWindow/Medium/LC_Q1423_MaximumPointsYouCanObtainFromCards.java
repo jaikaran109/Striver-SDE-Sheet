@@ -13,7 +13,7 @@ class Solution {
         // initially max = lsum
         maxSum = lsum ; 
 
-        // starting wala minus kro last se add kro 
+        // starting wala minus kro last se add kro  
         int r = cardPoints.length-1 ; 
         for(int i = k-1 ; i >= 0 ; i--)
         {
