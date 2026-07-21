@@ -10,3 +10,8 @@ class CheckBit {
         // and is 0 , so ans is false
     }
 }
+
+
+
+// Brute Force
+// Binary me convert kro phir peeche se traverse kr ke check kro set h ya nhi 
