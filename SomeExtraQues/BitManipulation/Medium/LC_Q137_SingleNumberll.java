@@ -57,12 +57,6 @@ class Solution {
 // Time  - O(n log n)
 // Space - O(1)
 
-  0 0 0 1 1 1 99
-
-  99 0 0 0 1 1 1
-
- 0 0 0 99 1 1 1 
-
 
 
 
