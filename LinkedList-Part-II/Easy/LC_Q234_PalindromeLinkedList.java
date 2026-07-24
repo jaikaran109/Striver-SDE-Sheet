@@ -11,7 +11,7 @@ class Solution {
 
         ListNode prev = null;
         ListNode curr = slow;
-        ListNode next = fast;
+        ListNode next = fast;  // bcz here fast is null, if u want u can replace fast with null
 
         while(curr != null){
             next = curr.next;
