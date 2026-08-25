@@ -15,9 +15,9 @@
      i=2, take 3   i=1, take 2  i=2, take 3   i=0, take 1  i=1, take 2   i=0, take 1
      [1, 2, 3]     [1, 3, 2]    [2, 1, 3]     [2, 3, 1]    [3, 1, 2]     [3, 2, 1]
      (Base Hit)    (Base Hit)   (Base Hit)    (Base Hit)   (Base Hit)    (Base Hit)
+```
 
-
-   2. Detailed Step-by-Step Working & Iteration Logic
+   ##2. Detailed Step-by-Step Working & Iteration Logic
 
 Yeh backtracking algorithm **Permutations** generate karne ke liye kaam karta hai. Isme har ek recursive call ke paas apna khud ka independent `for-loop` aur execution state hoti hai. Isko ekdum detail mein samajhte hain ki kaise ek-ek karke sari values process hoti hain:
 
