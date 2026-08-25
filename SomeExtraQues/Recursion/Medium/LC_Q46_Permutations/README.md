@@ -17,7 +17,7 @@
      (Base Hit)    (Base Hit)   (Base Hit)    (Base Hit)   (Base Hit)    (Base Hit)
 
 
-     ## 2. Detailed Step-by-Step Working & Iteration Logic
+   2. Detailed Step-by-Step Working & Iteration Logic
 
 Yeh backtracking algorithm **Permutations** generate karne ke liye kaam karta hai. Isme har ek recursive call ke paas apna khud ka independent `for-loop` aur execution state hoti hai. Isko ekdum detail mein samajhte hain ki kaise ek-ek karke sari values process hoti hain:
 
