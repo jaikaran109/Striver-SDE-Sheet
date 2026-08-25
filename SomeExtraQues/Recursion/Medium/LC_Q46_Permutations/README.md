@@ -3,7 +3,7 @@
 ## 1. Recursion Tree Diagram
 
 ```text
-                                         []
+                                         [1,2,3]
                   /                      |                      \
             i=0, take 1                i=1, take 2              i=2, take 3
              DS: [1]                    DS: [2]                  DS: [3]
