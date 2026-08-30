@@ -1,3 +1,6 @@
+// For Better Understanding watch Apna College - Explaination video
+// https://youtu.be/BdSJnIdR-4s?si=mW-2YwejyoLLmyfk
+
 class Solution {
 
     boolean isSafe(char[][] board, int row, int col, int n) {
