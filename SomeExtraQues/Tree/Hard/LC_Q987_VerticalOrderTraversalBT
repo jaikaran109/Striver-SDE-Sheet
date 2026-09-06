@@ -1,0 +1,59 @@
+// for understanding - Striver video
+
+class Tuple {
+    TreeNode node;
+    int row;
+    int col;
+    public Tuple(TreeNode _node, int _row, int _col) {
+        node = _node;
+        row = _row;
+        col = _col;
+    }
+}
+
+class Solution {
+    public List<List<Integer>> verticalTraversal(TreeNode root) {
+        // outer TreeMap: column -> (row -> values at that row)
+        TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>();
+        
+        Queue<Tuple> q = new LinkedList<>();
+        q.offer(new Tuple(root, 0, 0));   // root: row=0, col=0
+
+        while (!q.isEmpty()) {
+            Tuple tuple = q.poll();
+            TreeNode node = tuple.node;
+            int row = tuple.row;
+            int col = tuple.col;
+
+            map.putIfAbsent(col, new TreeMap<>());
+            map.get(col).putIfAbsent(row, new PriorityQueue<>());
+            map.get(col).get(row).offer(node.val);
+
+            if (node.left != null) {
+                q.offer(new Tuple(node.left, row + 1, col - 1));   // left -> row+1, col-1
+            }
+            if (node.right != null) {
+                q.offer(new Tuple(node.right, row + 1, col + 1));  // right -> row+1, col+1
+            }
+        }
+
+        List<List<Integer>> result = new ArrayList<>();
+
+        // outer loop: iterate columns in sorted order (TreeMap guarantees this)
+        for (TreeMap<Integer, PriorityQueue<Integer>> colMap : map.values()) {
+            List<Integer> colList = new ArrayList<>();
+
+            // inner loop: iterate rows in sorted order within this column
+            for (PriorityQueue<Integer> pq : colMap.values()) {
+                // extract all values at this (col,row), sorted ascending automatically
+                while (!pq.isEmpty()) {
+                    colList.add(pq.poll());
+                }
+            }
+
+            result.add(colList);
+        }
+
+        return result;
+    }
+}
